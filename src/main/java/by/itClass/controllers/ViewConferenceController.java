@@ -37,7 +37,7 @@ public class ViewConferenceController extends AbstractController {
 		IconferenceDAO confDAO = new ConferenceImpl();
 		HttpSession session = request.getSession();
 		List<Conference> conferences = (List<Conference>) session.getAttribute(Constants.CONF_LIST);
-		
+		//
 		try {
 			int indexConf = confDAO.fillConferencEvents(conferences, idConf);
 			if(indexConf != -1) {
